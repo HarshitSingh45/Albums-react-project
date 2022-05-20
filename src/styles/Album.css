@@ -1,0 +1,119 @@
+.AlbumContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid coral;
+    border-radius: 8px;
+    padding-right: 35px;
+    
+}
+.AlbumContainer .details {
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+.AlbumContainer .actions {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+.AlbumContainer .actions>button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
+  .updatePopup {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #313131;
+  }
+  .updateContainer {
+      margin-top: 150px;
+      height: 500px;
+      width: 500px;
+      border-radius: 10px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-between; */
+      align-items: center;
+      background-color: black;
+      /* width: 75%; */
+      /* height: 60px; */
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* margin-top: -30px; */
+      /* background-color: #f38d65; */
+  }
+  .updateContainer .heading {
+      /* flex: 30%; */
+      text-align: center;
+      color: white;
+  }
+  .updateContainer .body {
+      /* flex: 50%; */
+      width: 70%;
+      text-align: center;
+      color: coral;
+      font-weight: bold;
+      
+  }
+  .updateContainer .body .form {
+      margin-top: 20px;
+      font-size: 1.3rem;
+  }
+  #input {
+      margin-top: 10px;
+      width: 100%;
+      border: none;
+      padding: 4px;
+
+  }
+  .formBtn {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .cross {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+  .cross>button {
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: crimson;
+  }

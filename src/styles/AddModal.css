@@ -1,0 +1,77 @@
+.modalBackGround {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    /* light mode */
+    /* background-color: rgba(200, 200, 200); */ 
+    /* dark mode */
+    background-color: #313131;
+}
+.modalContainer {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    /* loght mode */
+    /* background-color: white; */
+    /* dark mode */
+    background-color: black;
+    color: white;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.close {
+    display: flex;
+    justify-content: flex-end;
+}
+.close>button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: crimson;
+  }
+.title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+.modalContainer .body {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .modalContainer .body .input {
+      width: 70%;
+      font-size: 1.2rem;
+  }
+.modalContainer .foot {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modalContainer .foot>button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
