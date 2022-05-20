@@ -10,9 +10,6 @@ const customFetch = async(url, {body, ...customConfig}) => {
         },
     };
 
-    // if(body) {
-    //     config.body = getFormBody(body);
-    // }
     config.body = body
 
     try{
@@ -62,15 +59,3 @@ export const deleteAlbum = (id) => {
         method: 'DELETE'
 })
 }
-const getFormBody = (params) => {
-    let formBody = [];
-  
-    for (let property in params) {
-      let encodedKey = encodeURIComponent(property); 
-      let encodedValue = encodeURIComponent(params[property]); 
-  
-      formBody.push(encodedKey + '=' + encodedValue);
-    }
-  
-    return formBody.join('&');
-  };
