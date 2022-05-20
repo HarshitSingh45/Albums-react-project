@@ -1,11 +1,12 @@
-// import React from 'react'
-// import {Link} from 'react-router-dom';
 
 
+// Navbar component
 function Navbar({setAddAlbumPopup}) {
   return (
     <div style={styles.navbar}>
+      {/* app title */}
         <div className="appName">&lt;CRUD Album&gt; </div>
+        {/* button to add album */}
         <div className="addAlbumBtn">
           <button style={styles.addAlbumBtn} onClick={() => setAddAlbumPopup(true)}>Add Album</button>
         </div>
