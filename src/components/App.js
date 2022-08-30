@@ -4,6 +4,7 @@ import AddModal from "./AddModal";
 import Album from "./Album";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
+import Pagination from "./Pagination";
 
 function App() {
   // to store all the albums which we fetched from the the api we used albums, setAlbums
@@ -12,6 +13,9 @@ function App() {
   const [addAlbumPopup, setAddAlbumPopup] = useState(false);
   // whenever system is fetching info from api we display loader, this indacator helps in displaying loader
   const [isloading, setIsloading] = useState(true);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
 
 
   useEffect(() => {
@@ -84,6 +88,14 @@ function App() {
     setIsloading(false);
   }
 
+  // get current posts
+  const indexOfLastPost = currentPage * postsPerPage ;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage ;
+  const currentPosts = albums.slice(indexOfFirstPost, indexOfLastPost);
+
+  // change page 
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <div style={{fontFamily: 'Inter, sansSerif' }}>
       {/* Navbar component */}
@@ -99,12 +111,17 @@ function App() {
       {/* passing each album data to album component and rendering all albums on home page */}
       <div style={styles.albCont}>
         {/* passing album data using map */}
-        {albums.map((album, index) => {
+        {currentPosts.map((album, index) => {
           return (
             <Album userId={album.userId}  id={album.id} title={album.title} key={index} handleClick={handleUpdateAlbum} handleDelete={handleDeleteAlbum} />
           )
         })}
       </div> 
+      <Pagination 
+          postsPerPage={postsPerPage}
+          totalPosts={albums.length}
+          paginate={paginate}
+      />
       </>}
       
     </div>
